@@ -73,6 +73,9 @@ class Window(Gtk.Window):
         scroller = Gtk.ScrolledWindow()
         scroller.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)
         scroller.set_child(view)
-        label = Gtk.Label.new(path.name[:16] + "...")
+        title = path.name
+        if len(title) > 16:
+            title = title[:16] + "..."
+        label = Gtk.Label.new(title)
         self.notebook.append_page(scroller, label)
         view.append(*subtitles)
