@@ -9,6 +9,8 @@ editor, but you can view a subtitle file.
 bin/neapol /path/to/subtitle.srt
 ```
 
+<img src="data/screenshot.png" width="780" alt="Screenshot">
+
 If you like it, consider forking the code and adding the missing pieces.
 
 If you just need something that works, try
