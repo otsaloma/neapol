@@ -67,8 +67,8 @@ class Window(Gtk.Window):
             self.close()
             return True
 
-    def open(self, path):
-        subtitles = neapol.files.read(path)
+    def open(self, path, encoding="utf-8"):
+        subtitles = neapol.files.read(path, encoding)
         view = neapol.View()
         scroller = Gtk.ScrolledWindow()
         scroller.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)

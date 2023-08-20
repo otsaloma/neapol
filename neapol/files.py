@@ -48,8 +48,8 @@ class SubRip:
                     subtitle.text += lines[j]
                 yield subtitle
 
-def read(path):
+def read(path, encoding="utf-8"):
     path = Path(path)
     if path.suffix == ".srt":
-        return list(SubRip.read(path))
+        return list(SubRip.read(path, encoding))
     raise NotImplementedError
